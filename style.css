@@ -1,0 +1,1372 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Lato&family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url(Images/page2bg.jpg);
+}
+
+body {
+    padding-top: 90px;
+}
+img{
+    user-select: none;
+}
+/* Selection */
+::selection {
+    background-color: #ffa600ce; /* Change background color */
+    color: #000; /* Change text color */
+  }
+/* navbar */
+.navbar-custom {
+    background: rgba(0, 0, 0, 0.6);
+    /* Adjust transparency */
+    backdrop-filter: blur(10px);
+    /* Adjust the blur intensity */
+    position: fixed;
+    /* Keeps it fixed at the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 12px 20px;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    overflow: hidden;
+}
+
+.navbar-custom .nav-link {
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0 12px;
+    text-align: end;
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover {
+    color: rgb(255, 166, 0);
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+.icon-btn:hover {
+    color: rgb(255, 166, 0);
+}
+
+/* Hide icons on small screens */
+.hide-on-mobile {
+    display: none;
+}
+
+/* Show icons only on large screens */
+@media (min-width: 992px) {
+    .hide-on-mobile {
+        display: inline-block;
+    }
+
+    .ri-menu-fill {
+        display: none;
+    }
+}
+
+/* footer */
+.footer-custom {
+    background-color: transparent;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: color 0.4s ease-in-out;
+}
+
+.footer-link:hover {
+    color: rgb(255, 166, 0);
+}
+
+.footer-icon {
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.4s ease-in-out;
+}
+
+.para {
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 35px;
+}
+
+.footer-icon:hover {
+    color: rgb(255, 166, 0);
+}
+
+/* offer section */
+.offer-container {
+    display: flex;
+    gap: 6;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #000000;
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.offer-image {
+    flex: 1;
+    max-width: 50%;
+    object-fit: cover;
+}
+
+.offer-details {
+    flex: 1;
+    background-color: #000000;
+
+    p {
+        color: rgb(177, 173, 173);
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    h3 {
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 40px;
+        letter-spacing: 2px;
+    }
+}
+
+.limited-offer-badge {
+    background-color: #ffa500;
+    color: black;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bonus-list {
+    background-color: #141414;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+
+    h4 {
+        color: #ffa600d8;
+    }
+}
+
+.bonus-list li {
+    margin-bottom: 10px;
+    color: rgb(177, 173, 173);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .offer-container {
+        flex-direction: column;
+    }
+
+    .offer-image,
+    .offer-details {
+        max-width: 100%;
+    }
+}
+
+/* .carousel-fade {
+    border-bottom: 1px solid #2c2c2c;
+} */
+/* this week container */
+.card-container {
+    background-color: #000000;
+    border-top: 1px solid #2c2c2c;
+
+    h1 {
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 40px;
+        letter-spacing: 2px;
+        /* border-bottom: 2px solid #2c2c2c; */
+        padding: 30px 0;
+
+        span {
+            color: #ffa500;
+        }
+    }
+}
+
+.gta-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 4px;
+    border: none;
+}
+
+.gta-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gta-card .overlay-text {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 45px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.overlay-text-large {
+    font-size: 1.8rem;
+}
+
+.overlay-text-small {
+    font-size: 1rem;
+}
+
+.gta-card:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .overlay-text-large {
+        font-size: 1.5rem;
+    }
+
+    .overlay-text-small {
+        font-size: 0.9rem;
+    }
+}
+
+/* Carrer layout */
+.gta-career-container {
+    background-color: transparent;
+    border-top: 1px solid #2c2c2c;
+}
+
+.gta-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    cursor: pointer;
+}
+
+.gta-mission-scroll {
+    position: absolute;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    animation: scrollVertical 80s linear infinite alternate;
+
+}
+
+.gta-mission-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.gta-mission-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scrollVertical {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-67.5%);
+    }
+}
+
+.gta-mission-scroll:hover {
+    animation-play-state: paused;
+}
+
+.gta-career-progress {
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 45px;
+        letter-spacing: 1px;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: rgb(177, 173, 173);
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: justify;
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+}
+
+.gta-track-progress-btn {
+    background-color: #ffa500;
+    color: rgb(32, 30, 30);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 25px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.gta-track-progress-btn:hover {
+    background-color: #ffc800;
+}
+
+.gta-career-icon {
+    width: 100px;
+    height: 100px;
+    background-image: url(Images/profilee.jpg);
+    background-position: left;
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+@media (max-width: 1621px) {
+
+    .gta-mission-grid,
+    .gta-mission-scroll {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gta-career-progress {
+        text-align: center;
+        align-items: center;
+    }
+
+    @keyframes scrollVertical {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-80.5%);
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    @keyframes scrollVertical {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-69.5%);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+
+    .gta-mission-grid,
+    .gta-mission-scroll {
+        grid-template-columns: 1fr;
+    }
+
+    @keyframes scrollVertical {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-90.5%);
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    @keyframes scrollVertical {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-80%);
+        }
+    }
+}
+
+.upd {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 45px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+}
+
+.update {
+    border-top: 1px solid #2c2c2c;
+}
+
+.update-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.update-card img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.update-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.956), transparent);
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    transition: .5s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+}
+
+.update-card .overlay-text {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+@media (max-width: 350px) {
+    .update-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .update-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+@media (max-width: 990px) {
+    .update-card {
+        width: 100%;
+    }
+
+    .update-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+/* subscribe part */
+.subscribe-container {
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+    z-index: -1;
+    border-top: 1px solid #2c2c2c;
+}
+
+.subscribe-content {
+    max-width: 600px;
+    padding: 30px;
+
+    h2 {
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        line-height: 50px;
+        color: #ffa500;
+    }
+
+    p {
+        color: rgb(177, 173, 173);
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+}
+
+.rockstar-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.btn-subscribe {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.3s linear;
+}
+
+.btn-subscribe:hover {
+    color: #ffa500;
+}
+
+/* redemption vdeo part */
+.video-background {
+    position: relative;
+    background-color: black;
+    height: 82vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+@media (max-width:350px) {
+    .video-background {
+        position: relative;
+        background-color: black;
+        height: 75vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.rdo-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+
+    p {
+        color: rgb(177, 173, 173);
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        /* letter-spacing: 1px; */
+    }
+}
+
+.btn-rdo {
+    background-color: #ffa600ba;
+    color: white;
+    border: none;
+    transition: all 0.3s linear;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    /* letter-spacing: 1px; */
+    line-height: 25px;
+    /* text-transform: uppercase; */
+}
+
+.btn-rdo:hover {
+    transform: translateY(-10px);
+    color: white;
+}
+
+.rdo-title {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px;
+    line-height: 40px;
+    text-transform: uppercase;
+
+    span {
+        color: #ffa500;
+    }
+}
+
+.avail {
+    color: rgb(177, 173, 173);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+/* Responsive Typography */
+@media (max-width: 1200px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 0.9rem;
+    }
+
+    .btn-lg {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem;
+    }
+
+    .btn-group-vertical {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-3 {
+        font-size: 1.5rem;
+    }
+
+    .lead {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.page2 {
+    background-image: url(Images/page2bg.jpg);
+}
+
+/* step into section */
+.rdo-description {
+    padding: 5rem 0;
+}
+
+.rdo-title1 {
+    font-size: 1.8rem;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 45px;
+    /* text-transform: uppercase; */
+    margin-bottom: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.953);
+    transition: color 0.3s linear;
+
+    span {
+        color: #ffa500;
+        transition: color 0.3s linear;
+    }
+}
+
+.rdo-title1:hover {
+    color: #ffa600d5;
+
+    span {
+        color: white;
+    }
+}
+
+.rdo-subtitle {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.rdo-text {
+    line-height: 1.6;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: rgb(177, 173, 173);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .rdo-title1 {
+        font-size: 1.5rem;
+    }
+
+    .rdo-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .rdo-text {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+
+    .rdo-description {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .rdo-title1 {
+        font-size: 1.2rem;
+    }
+
+    .rdo-subtitle {
+        font-size: 1rem;
+    }
+
+    .rdo-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Bounty hunters section*/
+.rdo-features-header {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.rdo-feature-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.rdo-feature-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.rdo-feature-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.62);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rdo-feature-overlay h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.rdo-feature-card:hover .rdo-feature-overlay {
+    opacity: 1;
+}
+
+.rdo-feature-card:hover img {
+    transform: scale(1.1);
+}
+
+.rdo-feature-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .rdo-features-header {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .rdo-feature-overlay h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .rdo-features-header {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .rdo-feature-overlay h3 {
+        font-size: 0.9rem;
+    }
+}
+
+/* News section */
+.rdo-news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.rdo-news-header {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 10px 0;
+    color: #fff;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 45px;
+}
+
+.rdo-news-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.rdo-news-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.rdo-news-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.rdo-news-card:hover {
+    transform: scale(1.03);
+}
+
+.rdo-news-card:hover .rdo-news-card-overlay {
+    transform: translateY(0);
+}
+
+.rdo-news-card-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.rdo-patch-notes {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+.rdo-more-news {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    background-color: #8B0000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.rdo-more-news:hover {
+    background-color: #A00000;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .rdo-news-header {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .rdo-news-card-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .rdo-news-header {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .rdo-news-card-text {
+        font-size: 0.7rem;
+    }
+
+    .rdo-more-news {
+        max-width: 120px;
+    }
+}
+
+.page3 {
+    background-image: url(Images/pg3bg.png);
+    background-size: contain;
+    background-position: center;
+}
+
+/* western adventure */
+.western-top-nav {
+    background-color: black;
+    padding: 15px 0;
+}
+
+.western-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.western-main-backdrop {
+    position: relative;
+}
+
+.western-hero-visual {
+    background-image: url('Images/westernadv.png');
+    background-size: cover;
+    background-position: top;
+    height: 60vh;
+    position: relative;
+}
+
+.western-hero-visual1 {
+    background-image: url('Images/federalagent.png');
+    background-size: cover;
+    background-position: top;
+    height: 60vh;
+    position: relative;
+}
+
+.western-hero-visual2 {
+    background-image: url('Images/undead.png');
+    background-size: cover;
+    background-position: top;
+    height: 60vh;
+    position: relative;
+}
+
+.western-hero-details {
+    padding: 30px;
+
+    h1 {
+        color: #fff;
+        font-size: 1.8rem;
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+        line-height: 45px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: rgb(177, 173, 173);
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+.western-action-button {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+}
+
+.western-action-button:hover {
+    background-color: #6B0000;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .western-main-backdrop {
+        flex-direction: column;
+    }
+
+    .western-hero-details {
+        padding: 20px;
+    }
+}
+
+@media (max-width:300px) {
+    .western-hero-details {
+        padding: 25px;
+
+        h1 {
+            color: #fff;
+            font-size: 1rem;
+            font-family: "Boldonse", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 1px;
+            line-height: 30px;
+        }
+
+        p {
+            font-size: 0.8rem;
+            color: rgb(177, 173, 173);
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+}
+
+@media (min-width:769px) and (max-width:1199px) {
+    .western-hero-visual {
+        background-image: url('Images/westernadv.png');
+        background-size: cover;
+        background-position: top;
+        height: 85vh;
+        position: relative;
+    }
+
+    .western-hero-visual1 {
+        background-image: url('Images/federalagent.png');
+        background-size: cover;
+        background-position: top;
+        height: 85vh;
+        position: relative;
+    }
+
+    .western-hero-visual2 {
+        background-image: url('Images/undead.png');
+        background-size: cover;
+        background-position: top;
+        height: 85vh;
+        position: relative;
+    }
+}
+
+/* screens */
+.screenshot-grid__image-wrapper {
+    padding-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.screenshot-grid__image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.screenshot-grid__image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.screenshot-grid__image-wrapper:hover {
+    transform: scale(1);
+}
+
+.screenshot-grid__image-wrapper:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.screenshot-grid__image-wrapper:hover img {
+    filter: brightness(0.8);
+}
+
+.screenshot-grid__image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    transition: all 0.3s ease;
+
+    h4 {
+        color: #fff;
+        font-size: 1.5rem;
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+
+    p {
+        font-size: 1rem;
+        color: rgb(177, 173, 173);
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+@media (max-width:1000px) {
+    .screenshot-grid__image-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+        color: white;
+        text-align: center;
+        z-index: 2;
+        transition: all 0.3s ease;
+
+        h4 {
+            color: #fff;
+            font-size: 1rem;
+            font-family: "Boldonse", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 1px;
+            line-height: 25px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: rgb(177, 173, 173);
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+}
+
+.screenshot-grid__image-wrapper:hover .screenshot-grid__image-overlay {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .screenshot-grid__image-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .rdr-explore-title {
+        font-size: 0.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+        line-height: 45px;
+        text-align: center;
+    }
+}
+
+.rdr-explore-section {
+    padding: 2rem 0;
+}
+
+.rdr-explore-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.rdr-explore-card {
+    background-color: #1a1a1a;
+    border: none;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.rdr-explore-card:hover {
+    transform: scale(1.05);
+}
+
+.rdr-explore-card-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.rdr-explore-card-title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-weight: bold;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.rdr-explore-card-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .rdr-explore-title {
+        font-size: 1.2rem;
+    }
+}
